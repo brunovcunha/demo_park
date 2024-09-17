@@ -2,10 +2,10 @@ package com.brunov.demo_park_api.web.controller;
 
 import com.brunov.demo_park_api.entity.Usuario;
 import com.brunov.demo_park_api.service.UsuarioService;
-import com.brunov.demo_park_api.web.controller.dto.UsuarioCreateDto;
-import com.brunov.demo_park_api.web.controller.dto.UsuarioResponseDto;
-import com.brunov.demo_park_api.web.controller.dto.UsuarioSenhaDto;
-import com.brunov.demo_park_api.web.controller.dto.mapper.UsuarioMapper;
+import com.brunov.demo_park_api.web.dto.UsuarioCreateDto;
+import com.brunov.demo_park_api.web.dto.UsuarioResponseDto;
+import com.brunov.demo_park_api.web.dto.UsuarioSenhaDto;
+import com.brunov.demo_park_api.web.dto.mapper.UsuarioMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

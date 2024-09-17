@@ -1,4 +1,4 @@
-package com.brunov.demo_park_api.web.controller.dto;
+package com.brunov.demo_park_api.web.dto;
 
 import lombok.*;
 

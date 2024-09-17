@@ -1,8 +1,8 @@
-package com.brunov.demo_park_api.web.controller.dto.mapper;
+package com.brunov.demo_park_api.web.dto.mapper;
 
 import com.brunov.demo_park_api.entity.Usuario;
-import com.brunov.demo_park_api.web.controller.dto.UsuarioCreateDto;
-import com.brunov.demo_park_api.web.controller.dto.UsuarioResponseDto;
+import com.brunov.demo_park_api.web.dto.UsuarioCreateDto;
+import com.brunov.demo_park_api.web.dto.UsuarioResponseDto;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
 
