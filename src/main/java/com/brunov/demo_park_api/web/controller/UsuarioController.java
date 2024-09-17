@@ -6,6 +6,7 @@ import com.brunov.demo_park_api.web.controller.dto.UsuarioCreateDto;
 import com.brunov.demo_park_api.web.controller.dto.UsuarioResponseDto;
 import com.brunov.demo_park_api.web.controller.dto.UsuarioSenhaDto;
 import com.brunov.demo_park_api.web.controller.dto.mapper.UsuarioMapper;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class UsuarioController {
     private final UsuarioService usuarioService;
 
     @PostMapping
-    public ResponseEntity<UsuarioResponseDto> create(@RequestBody UsuarioCreateDto createDto) {
+    public ResponseEntity<UsuarioResponseDto> create(@Valid @RequestBody UsuarioCreateDto createDto) {
         Usuario user = usuarioService.salvar(UsuarioMapper.toUsuario(createDto));
 
         return ResponseEntity.status(201).body(UsuarioMapper.toDto(user));
@@ -35,7 +36,7 @@ public class UsuarioController {
 
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Void> updatePassword(@RequestBody UsuarioSenhaDto dto, @PathVariable Long id) {
+    public ResponseEntity<Void> updatePassword(@Valid @RequestBody UsuarioSenhaDto dto, @PathVariable Long id) {
         Usuario user = usuarioService.editarSenha(id,
                 dto.getSenhaAtual(),
                 dto.getNovaSenha(),
